@@ -15,15 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Optional: Add a debugging middleware to log all requests
-app.use((req, res, next) => {
-  console.log('Request received:', {
-    method: req.method,
-    url: req.url,
-    body: req.body,
-    headers: req.headers
-  });
-  next();
-});
+
 // Routes
 const eventRoutes = require('./routes/eventRoutes');
 const goalRoutes = require('./routes/goalRoutes');

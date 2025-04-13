@@ -17,6 +17,10 @@ app.use(express.urlencoded({ extended: true }));
 // Optional: Add a debugging middleware to log all requests
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('🎉 Calendar Backend is Live!');
+});
+
 const eventRoutes = require('./routes/eventRoutes');
 const goalRoutes = require('./routes/goalRoutes');
 const taskRoutes = require('./routes/taskRoutes');
